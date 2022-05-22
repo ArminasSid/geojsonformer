@@ -6,9 +6,11 @@
 !LICENCE
 !README.md
 !setup.py
+!setup.cfg
 
 # Except these folders
-!geojsonformer/
+!src/
 
-# Additionally ignore all __pycache__ folders
+# Additionally ignore all cache folders
 **/__pycache__
+**/*.egg-info
