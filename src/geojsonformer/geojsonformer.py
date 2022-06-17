@@ -4,12 +4,13 @@ import json
 
 
 class GeoJSON:
-    def __init__(self):
-        self._json = self._create_base_geojson()
+    def __init__(self, epsg: str = '4326'):
+        self._json = self._create_base_geojson(epsg=epsg)
 
-    def _create_base_geojson(self) -> dict:
+    def _create_base_geojson(self, epsg: str) -> dict:
         return {
             'type': 'FeatureCollection',
+            "crs": { "type": "name", "properties": { "name": f'urn:ogc:def:crs:EPSG::{epsg}' } },
             'features': []
         }
 

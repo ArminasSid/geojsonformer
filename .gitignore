@@ -7,6 +7,7 @@
 !README.md
 !setup.py
 !setup.cfg
+!pyproject.toml
 
 # Except these folders
 !src/
